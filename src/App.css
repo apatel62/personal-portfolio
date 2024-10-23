@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* brand color palette */
+  :root {
+    --primary: rgba(68, 88, 119, 1);
+    --secondary: rgba(146, 204, 206, 1);
+    --tertiary: rgba(49, 52, 61, 1);
+    --dark: rgba(28, 29, 33, 1);
+    --light: rgba(238, 238, 247, 1);
+    --error: #ff0022;
+  }
+  
+  /* defines the font family, default margin, default paddings, text-color, and line-height for elements inside the body*/
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--primary);
+    background-color: var(--light);
+    line-height: 1.5;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  /* styles for the header and nav bar*/
+  header {
+    padding: 15px 6% 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--tertiary);
+    box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
+  }
+  /* styles for the h1 element in header*/
+  header h1 {
+    color: var(--tertiary);
+    background-color: var(--secondary);
+    padding: 5px 1% 5px 6%;
+    margin: 0;
+    font-size: 4vw;
+    line-height: 1;
+  }
+  
+  /* defines the nav bar as flex*/
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  /* styles for each a tag inside nav*/
+  nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: var(--secondary);
+    margin-right: 10px;
+    background-image: linear-gradient(270deg, var(--secondary) 0%, var(--secondary) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all 0.25s ease-in;
+    font-size: 1.4rem;
+  }
+  
+  /* styles when hovering over each a tag in nav*/
+  nav a:hover {
+    background-size: 100% 100%;
+    color: var(--primary);
+  }
+  
+  /* highlights the current page the user is on on the nav bar*/
+  nav a.active {
+    background-size: 100% 100%;
+    color: var(--primary);
+  }
+  
+  /* margin style for the last a tag in nav*/
+  nav a:last-child {
+    margin-right: 0;
+  }
+  
+  /* margin styles for the main tag*/
+  main {
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+  
+  /* styles for the banner below the nav bar*/
+  .hero-banner {
+    background: rgb(68, 88, 120);
+    background-image: url("./assets/images/02-hero-bg.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+    min-height: 30vh;
+    color: var(--light);
+    padding: 2% 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+  
+  /* styles for the page-wrapper class inside main*/
+  .page-wrapper {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* styles for the page-section class inside page-wrapper*/
+  .page-section {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  
+  /* styles for the h2 tag inside page-section class*/
+  .page-section > h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid var(--primary);
+    font-size: 4vw;
+    line-height: 1.1;
+  }
+  
+  /* flex style for the div element inside the page-section class*/
+  .page-section > div {
+    flex: 0 0 77%;
+  }
+  
+  /* margin style for the p tag inside the page-section class*/
+  .page-section p {
+    margin-bottom: 20px;
+  }
+  
+  /* flex styles for the portfolio tiles*/
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* flex styles for each tile in portfolio*/
+  .flex-item {
+    border: 5px solid var(--secondary);
+    background-color: var(--primary);
+    color: var(--tertiary);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+  }
+  
+  /* feature first portfolio item */
+  .flex-item:first-child {
+      min-height: 400px;
+      flex-basis: 100%;
+  }
+  
+  /* style when hovering over each tile*/
+  .flex-item:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* style for the text box inside each tile*/
+  .flex-item div {
+    background-color: var(--secondary);
+    padding: 8px 10px;
+  }
+  
+  /* style for the h3 tag inside the div tag of each flex-item tile*/
+  .flex-item h3 {
+    font-size: 1.6rem;
+  }
+  
+  /* portfolio project images */
+  .readme { 
+    background-image: url("./assets/images/readme.jpg");
+  }
+  
+  .study {
+    background-image: url("./assets/images/study.jpg");
+  }
+  
+  .weather {
+    background-image: url("./assets/images/weather.jpg");
+  }
+  
+  .vehicle {
+    background-image: url("./assets/images/vehicle.jpeg");
+  }
+  
+  .employee {
+    background-image: url("./assets/images/employee.jpg");
+  }
+  
+  .machine {
+    background-image: url("./assets/images/machine.jpg");
+    
+  }
+  
+  /* styles for the footer*/
+  footer {
+    text-decoration: none;
+    text-align: center;
+    margin: 10px auto;
+  }
+  
+  /* transform style when hovering each icon in footer*/
+  footer i:hover {
+    transform: scale(1.2);
+  }
+  
+  /* spaces out the icons in the footer*/
+  .icon2 {
+    margin-left: 20px;
+  }
+  
+  /* flex styles for the form in contact.html*/
+  form {
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+  }
+  
+  /* form styles for the input tags only*/
+  form > *:not(label):not(p) {
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+  
+  /* style for the submit button*/
+  input[type=submit] {
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-width: 0px;
+  }
+  
+  /* style for when hovering over the button*/
+  input[type=submit]:hover {
+    border-style: inset;
+    background-color: var(--tertiary);
+    color: var(--light);
+  }
+  
+  /* style for the notifications when not filling out the form correctly*/
+  .error {
+    color: var(--error);
+    opacity: .75;
+    position: absolute;
+    margin-top: 5px;
+    display: none;
+  }
+  
+  /* style to display the corresponding form error*/
+  .error.active {
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+  }
+  
+  
+  /* media queries for when loading website on smaller devices*/
+  
+  /* media queries for a max-width of 980px */
+  @media screen and (max-width: 980px) {
+    header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 10vw;
+    }
+  
+    header nav {
+      justify-content: center;
+    }
+  
+    .page-section > h2,
+    .page-section > div {
+      flex: 0 0 100%;
+    }
+  
+    .page-section > h2 {
+      border-right: none;
+      border-bottom: 4px solid var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: left;
+      font-size: 7vw;
+    }
+  }
+  
+  /* media query for a max-width of 768px */
+  @media screen and (max-width: 768px) {
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .flex-item:first-child {
+      min-height: 150px;
+      flex-basis: 100%;
+  }
+  
+    .flex-item{
+      flex: 1 1 150px;
+    }
+  
+  }
+  
